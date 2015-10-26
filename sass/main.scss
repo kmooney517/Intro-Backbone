@@ -4,3 +4,23 @@
 body {
   background: #e2ebf3;
 }
+
+
+div {
+	div {
+		display: inline-block;
+		margin: 5px;
+		padding: 5px;
+		border: 1px solid black;
+		width: 300px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
+.title{
+	font-size: 20px;
+	color: green;
+}
+

@@ -13,9 +13,25 @@ $.ajaxSetup({
 });
 
 import DonutTemplate from './donut_template';
+import DonutCollection from './donut_collection';
 
+let donut = new DonutCollection();
 
+function populateDonuts() {
+	console.log(donut);
+	let $div = $('<div></div>');
+	donut.each(function(doni){
+		let info = doni.toJSON();
 
+		let $p = $( DonutTemplate(info) );
+
+		$div.append($p);
+	});
+
+	$('body').html($div);
+}
+
+donut.fetch().then(populateDonuts);
 
 
 
